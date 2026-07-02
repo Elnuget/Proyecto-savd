@@ -1,0 +1,84 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+\geometry{margin=1.8cm}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\section*{Resultados del Proyecto SAVD}
+
+Repositorio: \href{https://github.com/Elnuget/Proyecto-savd}{https://github.com/Elnuget/Proyecto-savd}
+
+El proyecto SAVD define y materializa una carcasa inicial para un Sistema de Automatizacion y Verificacion Documental. La propuesta parte de una planificacion agil con Scrum y se organiza en tres incrementos funcionales: gestion documental, automatizacion de validaciones y generacion de reportes con indicadores.
+
+\subsection*{Resultado general}
+
+Se construyo una base navegable del software esperado. Esta base permite demostrar el flujo principal del producto sin depender todavia de infraestructura externa, backend o base de datos. El prototipo permite iniciar sesion con credenciales de demostracion, cargar documentos permitidos, consultar registros, visualizar datos extraidos simulados, revisar estados de validacion, detectar observaciones y descargar un reporte basico.
+
+\subsection*{Resultados por incremento}
+
+\begin{tabular}{p{2.2cm}p{5.5cm}p{6.5cm}}
+\toprule
+\textbf{Sprint} & \textbf{Objetivo} & \textbf{Resultado obtenido} \\
+\midrule
+Sprint 1 & Gestion y almacenamiento de documentos & Interfaz base con autenticacion demostrativa, carga de archivos, validacion de formatos permitidos y listado de documentos registrados. \\
+Sprint 2 & Automatizacion del proceso documental & Simulacion de extraccion de informacion, ejecucion de reglas basicas de validacion y asignacion de estado por documento. \\
+Sprint 3 & Reportes y cierre del proceso & Panel con indicadores generales, detalle de resultado final, observaciones y descarga de reporte en texto. \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Historias de usuario cubiertas en la carcasa}
+
+\begin{itemize}
+  \item HU01: acceso mediante credenciales de demostracion.
+  \item HU02: carga de documentos con formatos permitidos.
+  \item HU03: listado actualizado de documentos cargados.
+  \item HU04: visualizacion de informacion extraida simulada.
+  \item HU05: validacion automatica mediante reglas basicas.
+  \item HU06: seguimiento de estado del proceso por documento.
+  \item HU07: consulta del resultado final de validacion.
+  \item HU08: generacion y descarga de reporte basico.
+  \item HU09: indicadores generales de documentos procesados.
+\end{itemize}
+
+\newpage
+
+\section*{Resultados Tecnicos y Proyeccion}
+
+\subsection*{Componentes entregados}
+
+\begin{tabular}{p{4.2cm}p{10cm}}
+\toprule
+\textbf{Componente} & \textbf{Resultado} \\
+\midrule
+Interfaz principal & Pagina web estatica con secciones para acceso, carga, listado, resultados e indicadores. \\
+Logica de aplicacion & Archivo JavaScript con control de sesion demostrativa, validacion de extensiones, generacion de registros, calculo de metricas y descarga de reportes. \\
+Estilos visuales & Hoja CSS responsiva para uso en escritorio y dispositivos moviles. \\
+Documentacion & README con descripcion del proyecto, alcance, ejecucion, estructura y proyeccion del software final. \\
+Resultados academicos & Documento LaTeX de dos hojas sin portada con resumen de resultados del proyecto. \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Indicadores demostrados}
+
+La carcasa muestra tres indicadores basicos: cantidad total de documentos cargados, documentos aprobados y documentos con observaciones. Estos indicadores representan el punto de partida para un tablero real de supervision documental.
+
+\subsection*{Alcance pendiente para version productiva}
+
+Para convertir la carcasa en un sistema completo se requiere implementar backend, base de datos, almacenamiento seguro de archivos, autenticacion real, motor OCR o extraccion de texto, reglas configurables de validacion, trazabilidad, auditoria, reportes PDF o Excel y pruebas automatizadas.
+
+\subsection*{Conclusion}
+
+El resultado obtenido cumple la funcion de transformar la planificacion Scrum en una base visible y ejecutable del sistema. La carcasa permite validar el flujo esperado con usuarios, alinear criterios de aceptacion y servir como punto de partida para el desarrollo incremental del producto final.
+
+\end{document}

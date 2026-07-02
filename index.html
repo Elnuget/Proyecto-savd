@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SAVD - Verificacion Documental</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <strong>SAVD</strong>
+        <a href="https://github.com/Elnuget/Proyecto-savd" target="_blank" rel="noreferrer">Repositorio</a>
+      </nav>
+      <section class="hero-content">
+        <p class="eyebrow">Sistema de Automatizacion y Verificacion Documental</p>
+        <h1>Carcasa funcional para carga, validacion y reportes de documentos.</h1>
+        <p>
+          Prototipo basado en los tres incrementos Scrum definidos para el proyecto:
+          gestion documental, automatizacion de verificacion y resultados con indicadores.
+        </p>
+      </section>
+    </header>
+
+    <main class="shell">
+      <section class="card login-card" aria-labelledby="login-title">
+        <div>
+          <p class="step">HU01</p>
+          <h2 id="login-title">Acceso seguro</h2>
+          <p>Use credenciales de demostracion para habilitar el panel.</p>
+        </div>
+        <form id="login-form" class="form">
+          <label>
+            Usuario
+            <input id="user" name="user" value="analista" autocomplete="username" required>
+          </label>
+          <label>
+            Contrasena
+            <input id="password" name="password" type="password" value="savd2026" autocomplete="current-password" required>
+          </label>
+          <button type="submit">Iniciar sesion</button>
+          <p id="login-message" class="message" role="status"></p>
+        </form>
+      </section>
+
+      <section id="dashboard" class="dashboard hidden" aria-live="polite">
+        <section class="panel upload-panel">
+          <div>
+            <p class="step">HU02 - HU06</p>
+            <h2>Carga y verificacion</h2>
+            <p>Formatos permitidos: PDF, DOCX, TXT, JPG y PNG.</p>
+          </div>
+          <form id="upload-form" class="upload-box">
+            <input id="document-file" type="file" accept=".pdf,.docx,.txt,.jpg,.jpeg,.png" required>
+            <button type="submit">Procesar documento</button>
+          </form>
+        </section>
+
+        <section class="metrics" aria-label="Indicadores generales">
+          <article>
+            <span id="metric-total">0</span>
+            <p>Documentos cargados</p>
+          </article>
+          <article>
+            <span id="metric-valid">0</span>
+            <p>Validados</p>
+          </article>
+          <article>
+            <span id="metric-errors">0</span>
+            <p>Con observaciones</p>
+          </article>
+        </section>
+
+        <section class="grid">
+          <article class="panel">
+            <p class="step">HU03</p>
+            <h2>Documentos registrados</h2>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Documento</th>
+                    <th>Estado</th>
+                    <th>Resultado</th>
+                  </tr>
+                </thead>
+                <tbody id="document-table"></tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <p class="step">HU04 - HU08</p>
+            <h2>Resultado de validacion</h2>
+            <div id="result-detail" class="result-detail">
+              <p>Seleccione o cargue un documento para ver datos extraidos, reglas aplicadas y observaciones.</p>
+            </div>
+            <button id="download-report" type="button" disabled>Descargar reporte</button>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
